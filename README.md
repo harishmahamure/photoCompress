@@ -6,6 +6,7 @@ The Client side photo compression web app using react and Jimp.
 
 CompressPhotos is a lightweight and powerful image compression Application. Compressor will allow you to compress large photos into smaller sized photos with very less or negligible loss in quality of the image.
 
+Demo- https://compressphotos.com/
 
 ## Development
 
@@ -15,8 +16,27 @@ CompressPhotos is a lightweight and powerful image compression Application. Comp
  cd  photoCompress 
  ```
 
-## Installation
+2. Use the package manager [npm](https://www.npmjs.com/get-npm) to install the packages.
+```
+npm install 
+```
 
-Use the package manager [npm](https://www.npmjs.com/get-npm) to install the package
+3. Run app on local machine
+```
+npm install 
+```
+4. Build Application for deployment.
 
-Demo- https://compressphotos.com/
+```
+npm build 
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[GNU General Public License v3.0](https://github.com/harishmahamure/photoCompress/blob/master/LICENSE)
+
+
