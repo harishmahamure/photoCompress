@@ -5,7 +5,10 @@ import imageCompression from 'browser-image-compression';
 import Header from "./Header";
 import Buttons from './Buttons';
 import Preview from './Preview';
-// import Portal from './Portal/Portal'
+import Information from './Information';
+import Message from './Message';
+import Slider from './Slider';
+
 export default function App() {
   const [state, setState] = useState({
     file: null,
@@ -72,7 +75,6 @@ export default function App() {
                 output:URL.createObjectURL(lossyOutput),
                 outputFile:fileS
               })
-
             }
           );
       });
@@ -89,6 +91,7 @@ export default function App() {
       width: null,
       height: null,
     });
+    window.location.reload(false);
   };
 
 
@@ -106,7 +109,7 @@ export default function App() {
       quality: parseInt(e.target.value),
     });
   }
-
+  console.log(quality)
 
   return(
     <React.Fragment>
@@ -127,15 +130,51 @@ export default function App() {
                 <div className="row">
                     <div className="col-sm-12 text-center py-2">
                         <Buttons loading={loading} name="download" className="btn btn-success mx-3" onClick={handleDownloadClick}/>
-                        <button loading={loading} className="btn btn-danger mx-3" onClick={handleCancel}>Cancel</button>
+                        <button loading={loading} className="btn btn-danger mx-3" onClick={handleCancel}>Cancel or New</button>
                     </div>
                 </div>
               )
         }
-        <div className="row">
-          
-        </div>
         <Preview base64Image={base64Image} output={output} />
+        {
+          outputFile 
+          ?
+          (
+            <React.Fragment>
+                <Information file={file} outputFile={outputFile} />
+                <Message file={file} outputFile={outputFile} />
+                <div className="row">
+                    <div className="col-md-10 col-sm-10 col-xs-10">
+                          <form action="#">
+                                <label for="customRange1" className="text-center text-info">
+                                  Change the slider to adjust image quantity and click on compress again to compress.
+                                </label>
+                                
+                                <p className="custom-range">
+                                  <input
+                                    type="range"
+                                    value={quality}
+                                    id="test5"
+                                    min={10}
+                                    max={90}
+                                    className="custom-range"
+                                    onChange={(e) => handleRangeChange(e)}
+                                  />
+                                  {quality}
+                                </p>
+                            </form>
+                    </div>
+                </div>
+                <div className="row text-center">
+                      <Buttons className="btn btn-success mx-auto" name="Compress Again" onClick={compressImage}  />
+                </div>
+            </React.Fragment>
+          )
+          :
+          (
+            null
+          )
+        }
     </React.Fragment>
   )
   // console.log(quality);

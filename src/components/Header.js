@@ -5,10 +5,10 @@ export default function Header(props) {
         <div className="row center-align">
             <div className="col-sm-12">
               <div className="d-flex justify-content-center">
-                    <div className="form-group">
+                    <div class="form-group">
                       <input 
                             type="file" 
-                            className="form-control-file" 
+                            class="form-control-file" 
                             name="pictures" 
                             accept="image/*"
                             className="btn btn-primary" 
