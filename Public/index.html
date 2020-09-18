@@ -1,82 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="utf-8" />
-    <title>Compress Photos- Compress Multiple JPEG, JPG, GIF & PNG AT ONE PLACE
-    </title>
-    <meta
-      name="description"
-      content="Compress Photos Offline and Online for free. Faster and Secure Compression. Compress Multiple JPEG, JPG, GIF & PNG AT one place."/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keyword" content="Compress photos offline, compress image offline, compress photo offline, photo size reducer download, offline compress app,Compress Photos,PEG Compress, Reudce Size, Reduce photos, Reduce My photos,file compressor,compress jpeg,reduce image size,jpg size reducer,photo compressor,photo size reducer,compress photo">
-    <link rel="shortcut icon" href="./logo.png" />
-    <link rel="canonical" href="https://www.compressphotos.com/" />
-    <link rel="apple-touch-icon" href="./logo.png">
-    <link rel="manifest" href="./manifest.json"/>
-    <!-- Open Graph-->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.compressphotos.com/">
-    <meta property="og:title" content="Compress Photos Offline and Online">
-    <meta property="og:image" content="./logo.png">
-    <meta property="og:description" content="Compress Photos Offline and Online for free. Faster and Secure Compression. Compress Multiple JPEG, JPG, GIF & PNG AT one place.">
-    <meta property="og:site_name" content="Compress Photos">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
- 
-    <!-- Next tags are optional but recommended -->
-    <!-- Generic page styles -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143520418-2"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  
-  gtag('config', 'UA-143520418-2');
-  </script>
-  <style>
-      @media (max-width: 767px) {
-        .small {
-          display: none;
-        }
-      }
-  </style>
-<body>
-    <div class="container">
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="/">CompressPhotos</a>
-          </nav>          
-          <div id="app" class="my-5 bg-gray"></div>
-          <div class="panel panel-dark">
-                <div class="panel-heading">
-                    <h3>
-                        Notes
-                    </h3>
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="width=device-width,initial-scale=1" name="viewport" />
+        <title>Compress photos- compress multiple jpg, png and gif</title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "SoftwareApplication",
+                "name": "Compress Photos",
+                "applicationCategory": "UtilitiesApplication",
+                "image": { "@type": "ImageObject", "url": "https://www.compressphotos.com/logo.png", "height": "406", "width": "305" },
+                "author": { "@type": "Person", "name": "Harish Mahamure" },
+                "description": "Compress Photos Offline and Online for free. Faster and Secure Compression. Compress Multiple JPEG, JPG, GIF & PNG AT one place.",
+                "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "855" },
+                "operatingSystem": "Windows/Android/iOS/ Debian"
+            }
+        </script>
+        <meta content="Compress offline and online photos for free. Fast and secure compression. Compress multiple JPEG, JPG, GIF and PNG in one place." name="description" />
+        <meta content="width=device-width,initial-scale=1" name="viewport" />
+        <meta
+            content="Compress photos, app for compressing photos,best jpeg compression,change image size online,bulk image compressor,,compress image,image optimizer,photo compressor,how to compress photos,reduce image size in kb,photo size reducer download, offline compress app, lossless compression"
+            name="keyword"
+        />
+        <meta content="#000000" name="theme-color" />
+        <link href="https://www.compressphotos.com/" rel="canonical" hreflang="en" />
+        <link href="https://www.compressphotos.com/hi/" rel="alternate" hreflang="hi" />
+        <link href="https://www.compressphotos.com/esp.php" rel="alternate" hreflang="es" />
+        <link href="https://www.compressphotos.com/pt.php" rel="alternate" hreflang="pt" />
+        <link href="https://www.compressphotos.com/ru.php" rel="alternate" hreflang="ru" />
+        <link href="https://www.compressphotos.com/de.php" rel="alternate" hreflang="de" />
+        <link href="https://www.compressphotos.com/ar.php" rel="alternate" hreflang="ar" />
+        <link href="https://www.compressphotos.com/fr.php" rel="alternate" hreflang="fr" />
+        <link href="./logo.png" rel="shortcut icon" />
+        <link href="./logo.png" rel="apple-touch-icon" />
+        <link href="./manifest.json" rel="manifest" />
+        <meta content="website" property="og:type" />
+        <meta content="https://www.compressphotos.com/" property="og:url" />
+        <meta content="Compress photos offline and online" property="og:title" />
+        <meta content="/logo.png" property="og:image" />
+        <meta content="Compress offline and online photos for free. Fast and secure compression. Compress multiple JPEG, JPG, GIF, and PNG in one place." property="og:description" />
+        <meta content="Compress Photos" property="og:site_name" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143520418-2"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143520418-3"></script>
+        <!-- <script data-ad-client="ca-pub-1618497407371775" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "UA-143520418-3");
+        </script>
+    </head>
+
+    <body class="bg-light">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-info text-white" id="install">
+                <div class="row">
+                    <div class="col-sm-6 col-md-8 col-lg-8">
+                        <p>
+                            Click on install application into your device.
+                        </p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="float-right">
+                            <button class="btn btn-lg btn-block btn-light" id="installBtn">Install</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="panel-body">
-                    <ul>
-                
-                            <li>
-                                    Click on <strong>Add File</strong> to add multiple files.
-                            </li>
-        
-                            <li>
-                                    Once, you add your files. Click on <strong> Start Compress</strong> to start compresson algorithm to reduce your photo size. Click on cancel to stop.
-                            </li>
-                            <li>
-                                    Click on <strong> download </strong>  to download your compressed photos.
-                            </li>
-                            <li>
-                                    You can <strong>drag &amp; drop</strong> files from your desktop
-                                    on this webpage 
-                            </li>
-                        
-                            <li>
-                                    You can compress <strong>JPG, GIF, PNG</strong> with the best Quality.
-                            </li>
-      
-                        
-                      </ul>
+            </nav>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="py-3">
+                        <h1 class="display-5 text-center">Compress photos in one place.</h1>
+                        <p class="ui header text-center">Free image processing offline / online application. Optimize image size and image quality offline and online. Reduce JPEG, JPG, GIF and PNG in one place.</p>
+                    </div>
                 </div>
-          </div>
-    </div>
-</body>
+            </div>
+            <hr />
+
+            <div class="card border border-primary bg-white">
+                <div class="card-body">
+                    <div id="app"></div>
+                </div>
+            </div>
+            
+            <hr />
+            <div class="row">
+                <div class="col-sm-12"><h2 class="display-5 text-center">How to compress multiple images?</h2></div>
+                <div class="col-sm-12 col-md-4 col-lg-4 py-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center">1</h3>
+                            <p class="card-text">Click <strong>Add File </strong>to add multiple files.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 py-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center">2</h3>
+                            <p class="card-text">Click <strong>Start Compress </strong>to start the compression algorithm to reduce the size of your photo. Click Cancel to stop.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 py-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center">3</h3>
+                            <p class="card-text">Click <strong>Download </strong>to download your compressed photo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 py-3">
+                    <p class="lead text-center">You can compress <strong>JPG, GIF, PNG </strong>with the best quality.</p>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="display-5 text-center">How does image compression work?</h3>
+                    <p class="text-center">
+                        Compressor reduces the size of the photo file by analyzing each pixel in the image. With our test, the file size reduction from standard photographs was between 20% and 85%. Compressor is a program to compress and
+                        resize digital photos, as well as take special care of your digital photos to protect your true picture quality. Our compressors include specially designed advanced photo compression engines and technology.
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 py-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="text-info"><i class="fa fa-2x fa-clock-o"></i></span>
+                            <p class="lead">Fast compression</p>
+                            <p>The tool will do everything for you, just upload your file and it will set the best parameter to reduce its size and keep it as quality as possible.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 py-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="text-info"><i class="fa fa-2x fa-globe"></i></span>
+                            <p class="lead">Online/Offline</p>
+                            <p>When you are online or offline, the tool will allow you to use the application. The application uses client-side image compression.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 py-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="text-info"><i class="fa fa-2x fa-shield"></i></span>
+                            <p class="lead">Secure Compression</p>
+                            <p>You are the only person who has access to your files, as all communications are done through secure channels.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 py-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="text-info"><i class="fa fa-2x fa-check-square"></i></span>
+                            <p class="lead">Preview</p>
+                            <p>You can see a preview of your file first and only then save it back to your device.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 py-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="text-info"><i class="fa fa-2x fa-file"></i></span>
+                            <p class="lead">Supports all formats</p>
+                            <p>Image Compressor also works with any popular format such as JPEG, JPG, JIF, JIF, PNG and more rare ones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 class="display-5 text-center"><blockquote>Image Compressor is the first web application offline.</blockquote></h4>
+                    <p class="text-center">
+                        Compression Photo is a lightweight and powerful image compression application. The application will allow you to compress large photos into smaller size photos with loss of quality or negligible loss Image. You can
+                        install the application on your device and use it offline. You can install this application on your Windows / Android / Apple / Linux devices. This application is free application which you do not need to pay any
+                        kind of fee.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-dark text-center text-white">
+            <p class="lead py-1">follow us</p>
+            <div class="py-3">
+                <a class="fa fa-2x fa-facebook px-2" href="https://www.facebook.com/compressImages" rel="nofollow">
+                    <span class="d-none">facebook</span>
+                </a> 
+                <a class="fa fa-2x fa-twitter px-2" href="https://twitter.com/pibuxet" rel="nofollow">
+                <span class="d-none">twitter</span>
+                </a>
+                <a class="fa fa-2x fa-instagram px-2" href="https://www.instagram.com/harishmahamure7/?hl=en" rel="nofollow">
+                    <span class="d-none">Instagram</span>
+                </a>
+                <a class="fa fa-2x fa-linkedin px-2" href="https://www.linkedin.com/in/harish-mahamure-28a87b141/?originalSubdomain=in" rel="nofollow">
+                    <span class="d-none">Linkedin</span>
+                </a>
+                <a class="fa fa-2x fa-github px-2" href="https://github.com/harishmahamure/photoCompress" rel="nofollow">
+                    <span class="d-none">Github</span> </a>
+            </div>
+            <div class="py-2">© 2020 compress photos. All rights reserved.</div>
+        </footer>
+        <script>
+            let deferredPrompt;
+            const addBtn = document.querySelector("#install");
+            const btn = document.querySelector('#installBtn');
+            addBtn.style.display = "none";
+            window.addEventListener("beforeinstallprompt", (e) => {
+                console.log(e);
+                // Prevent Chrome 67 and earlier from automatically showing the prompt
+                e.preventDefault();
+                // Stash the event so it can be triggered later.
+                deferredPrompt = e;
+                // Update UI to notify the user they can add to home screen
+                addBtn.style.display = "block";
+
+                btn.addEventListener("click", (e) => {
+                    // hide our user interface that shows our A2HS button
+                    addBtn.style.display = "none";
+                    // Show the prompt
+                    deferredPrompt.prompt();
+                    // Wait for the user to respond to the prompt
+                    deferredPrompt.userChoice.then((choiceResult) => {
+                        if (choiceResult.outcome === "accepted") {
+                            console.log("User accepted the A2HS prompt");
+                        } else {
+                            console.log("User dismissed the A2HS prompt");
+                        }
+                        deferredPrompt = null;
+                    });
+                });
+            });
+        </script>
+    </body>
 </html>

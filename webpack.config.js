@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports= {
     entry:"./src/index.js",
     output:{
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "build"),
         filename: "bundle.js"
     },
     performance: {
@@ -26,6 +26,17 @@ module.exports= {
     plugins: [
         new HtmlWebpackPlugin({
             template: './Public/index.html'
-        })
-    ]
+        }),
+    ],
+    optimization: {
+        splitChunks: {
+          cacheGroups: {
+            vendors: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              chunks: 'all',
+            },
+          },
+        },
+      }
 };
